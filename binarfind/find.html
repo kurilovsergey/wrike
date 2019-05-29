@@ -1,0 +1,18 @@
+<script type="text/javascript">
+let find = (arr, a) => {
+    let lastelement = arr.length;
+    let firstelement = arr[0];
+    while (firstelement < lastelement) {
+        n = Math.floor((lastelement + firstelement) / 2);
+        if (a <= arr[n]) lastelement = n;
+        else firstelement = n + 1;
+    }
+    console.log(firstelement);
+    if (arr[firstelement] == a) return "искомый элемент под индексом " + firstelement
+    else return 'элемент в массиве отсутсвует';
+
+}
+
+console.log(find([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4));
+console.log(find([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 18));
+</script>
